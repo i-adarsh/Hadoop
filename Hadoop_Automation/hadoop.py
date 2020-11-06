@@ -17,12 +17,12 @@ def configureHadoop(choice):
         check = open("wget.txt", "r")
         wget = check.readline
 
-        if wget == "":
+        if wget == "\n":
             os.system("yum install wget -y")
-        if java == "":
+        if java == "\n":
             os.system("wget http://83.103.170.157/apps/java/jdk_1.8/jdk/jdk-8u202-linux-x64.rpm")
             os.system("rpm -ivh jdk-8u202-linux-x64.rpm")
-        if hadoop == "":
+        if hadoop == "\n":
             os.system("wget https://archive.apache.org/dist/hadoop/core/hadoop-1.2.1/hadoop-1.2.1-1.x86_64.rpm")
             os.system("rpm -ivh hadoop-1.2.1-1.x86_64.rpm --force")
             os.system("rm -rf /etc/hadoop/core-site.xml")
@@ -66,12 +66,12 @@ def configureHadoop(choice):
         check = open("wget.txt", "r")
         wget = check.readline
 
-        if wget == "":
+        if wget == "\n":
             os.system("yum install wget -y")
-        if java == "":
+        if java == "\n":
             os.system("wget http://83.103.170.157/apps/java/jdk_1.8/jdk/jdk-8u202-linux-x64.rpm")
             os.system("rpm -ivh jdk-8u202-linux-x64.rpm")
-        if hadoop == "":
+        if hadoop == "\n":
             os.system("wget https://archive.apache.org/dist/hadoop/core/hadoop-1.2.1/hadoop-1.2.1-1.x86_64.rpm")
             os.system("rpm -ivh hadoop-1.2.1-1.x86_64.rpm --force")
             os.system("rm -rf /etc/hadoop/core-site.xml")
