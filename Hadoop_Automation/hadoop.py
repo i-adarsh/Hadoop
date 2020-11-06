@@ -16,13 +16,16 @@ def configureHadoop(choice):
         hadoop = check.readline()
         check = open("wget.txt", "r")
         wget = check.readline
+        wget = wget.isalnum()
+        hadoop = hadoop.isalnum()
+        java = java.isalnum()
 
-        if wget.isalnum() is False:
+        if wget is False:
             os.system("yum install wget -y")
-        if java.isalnum() is False:
+        if java is False:
             os.system("wget http://83.103.170.157/apps/java/jdk_1.8/jdk/jdk-8u202-linux-x64.rpm")
             os.system("rpm -ivh jdk-8u202-linux-x64.rpm")
-        if hadoop.isalnum() is False:
+        if hadoop is False:
             os.system("wget https://archive.apache.org/dist/hadoop/core/hadoop-1.2.1/hadoop-1.2.1-1.x86_64.rpm")
             os.system("rpm -ivh hadoop-1.2.1-1.x86_64.rpm --force")
             os.system("rm -rf /etc/hadoop/core-site.xml")
@@ -61,17 +64,19 @@ def configureHadoop(choice):
         os.system("echo `rpm -qa | grep wget` > wget.txt")
         check = open("java.txt", "r")
         java = check.readline()
+        java = java.isalnum()
         check = open("hadoop.txt", "r")
         hadoop = check.readline()
+        hadoop = hadoop.isalnum()
         check = open("wget.txt", "r")
         wget = check.readline
-
-        if wget.isalnum() is False:
+        wget = wget.isalnum()
+        if wget is False:
             os.system("yum install wget -y")
-        if java.isalnum() is False:
+        if java is False:
             os.system("wget http://83.103.170.157/apps/java/jdk_1.8/jdk/jdk-8u202-linux-x64.rpm")
             os.system("rpm -ivh jdk-8u202-linux-x64.rpm")
-        if hadoop.isalnum() is False:
+        if hadoop is False:
             os.system("wget https://archive.apache.org/dist/hadoop/core/hadoop-1.2.1/hadoop-1.2.1-1.x86_64.rpm")
             os.system("rpm -ivh hadoop-1.2.1-1.x86_64.rpm --force")
             os.system("rm -rf /etc/hadoop/core-site.xml")
