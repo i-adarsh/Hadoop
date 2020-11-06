@@ -49,7 +49,7 @@ def configureHadoop(choice):
             os.system("cp -f core-site.xml /etc/hadoop/")
             os.system("cp -f hdfs-site.xml /etc/hadoop/")
         os.system("systemctl stop firewalld")
-        os.system("hadoop namenode -format")
+        os.system("hadoop namenode -format -y")
         os.system("hadoop-daemon.sh start namenode")
         os.system("netstat -tnlp")
 
