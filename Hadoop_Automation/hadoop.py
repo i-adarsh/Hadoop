@@ -77,6 +77,9 @@ choice = input('''Setup Hadoop
 
 1. Configure NameNode
 2. Configure DataNode
+3. Upload a File(Path)
+4. Check Your DataNode
+5. Enter Number for Replication
 
 Enter Your choice : ''')
 configureHadoop(choice)
