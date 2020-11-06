@@ -16,9 +16,6 @@ def configureHadoop(choice):
         hadoop = check.readline()
         check = open("wget.txt", "r")
         wget = check.readline
-        wget = wget.isalnum()
-        hadoop = hadoop.isalnum()
-        java = java.isalnum()
 
         if wget is False:
             os.system("yum install wget -y")
@@ -64,13 +61,10 @@ def configureHadoop(choice):
         os.system("echo `rpm -qa | grep wget` > wget.txt")
         check = open("java.txt", "r")
         java = check.readline()
-        java = java.isalnum()
         check = open("hadoop.txt", "r")
         hadoop = check.readline()
-        hadoop = hadoop.isalnum()
         check = open("wget.txt", "r")
         wget = check.readline
-        wget = wget.isalnum()
         if wget is False:
             os.system("yum install wget -y")
         if java is False:
